@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #F8FAFB;
+  --color-foreground: #1A1A2E;
+  --color-primary: #0D9488;
+  --color-primary-dark: #0F766E;
+  --color-primary-light: #CCFBF1;
+  --color-accent: #06B6D4;
+  --color-muted: #64748B;
+  --color-border: #E2E8F0;
+  --color-card: #FFFFFF;
+  --color-hero-bg: #F0FDFA;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    @apply font-sans antialiased overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight;
+  }
+
+  ::selection {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+  }
+}
+
+@layer utilities {
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#0D9488] to-[#06B6D4];
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 px-6 md:px-12 lg:px-20;
+  }
+}
+
+/* --- Preloader --- */
+.preloader-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+}
+
+/* --- Watermark --- */
+.watermark {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 40;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(13, 148, 136, 0.25);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* --- Custom scrollbar --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 99px;
+}

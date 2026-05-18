@@ -1,0 +1,357 @@
+.hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+
+.heroGlow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(183, 110, 121, 0.08) 0%, transparent 60%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.heroSubtitle {
+  font-family: var(--font-elegant);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--color-text-secondary);
+  max-width: 550px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* ============ STORY ============ */
+.storySection {
+  background: var(--color-bg-secondary);
+}
+
+.storyImageWrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 520px;
+  position: relative;
+}
+
+.storyImage {
+  position: absolute;
+  inset: -10% 0;
+  width: 100%;
+  height: 120%;
+}
+
+.storyImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.storyText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.storyParagraph {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+.storyStats {
+  display: flex;
+  gap: 40px;
+  padding-top: 24px;
+  margin-top: 8px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.storyStat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.storyStatNum {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  background: var(--gradient-rose);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.storyStatLabel {
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ============ VALUES ============ */
+.valuesSection {
+  background: var(--color-bg-primary);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.valueCard {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: 20px;
+  padding: 36px 28px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.valueIcon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.valueTitle {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.valueDesc {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* ============ TIMELINE ============ */
+.timelineSection {
+  background: var(--color-bg-secondary);
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--color-rose-gold), transparent);
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0;
+  position: relative;
+  width: 50%;
+  padding-right: 40px;
+}
+
+.timelineItemRight {
+  margin-left: 50%;
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: 40px;
+}
+
+.timelineDot {
+  position: absolute;
+  right: -6px;
+  top: 32px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-rose-gold);
+  border: 2px solid var(--color-bg-secondary);
+  z-index: 2;
+}
+
+.timelineItemRight .timelineDot {
+  left: -6px;
+  right: auto;
+}
+
+.timelineCard {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.timelineYear {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--gradient-rose);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.timelineTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 6px 0;
+}
+
+.timelineDesc {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* ============ TEAM ============ */
+.teamSection {
+  background: var(--color-bg-primary);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.teamCard {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: 20px;
+  padding: 36px 28px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.teamCard:hover {
+  border-color: var(--color-border);
+}
+
+.teamAvatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--gradient-rose);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-bg-primary);
+}
+
+.teamName {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.teamRole {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-rose-gold);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.teamSpecialty {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .storyImageWrapper {
+    height: 300px;
+  }
+
+  .storyStats {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timelineItem {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+
+  .timelineItemRight {
+    margin-left: 0;
+    padding-left: 60px;
+  }
+
+  .timelineDot {
+    left: 14px;
+    right: auto;
+  }
+
+  .timelineItemRight .timelineDot {
+    left: 14px;
+  }
+}

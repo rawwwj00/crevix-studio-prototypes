@@ -1,0 +1,228 @@
+.section {
+  min-height: 600vh;
+  position: relative;
+}
+
+.stickyWrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.titleArea {
+  position: relative;
+  z-index: 5;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.titleSad {
+  color: var(--color-text-tertiary);
+  font-style: italic;
+}
+
+.visualArea {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glowEffect {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(183, 110, 121, 0.2) 0%, rgba(247, 231, 206, 0.08) 40%, transparent 70%);
+  z-index: 0;
+}
+
+.personCard {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 3;
+}
+
+.personCardHappy {
+  z-index: 4;
+}
+
+.personImageWrapper {
+  width: 280px;
+  height: 280px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 2px solid var(--color-border);
+  background: var(--color-bg-card);
+  box-shadow: var(--shadow-card);
+}
+
+.personImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.personLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: var(--color-bg-glass);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  border: 1px solid var(--color-border-light);
+}
+
+.labelTag {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.labelTagAfter {
+  color: var(--color-rose-gold);
+  background: rgba(183, 110, 121, 0.1);
+}
+
+.labelEmoji {
+  font-size: 1.2rem;
+}
+
+.labelText {
+  font-family: var(--font-elegant);
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.scissorsWrapper {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scissorsSvg {
+  filter: drop-shadow(0 0 20px rgba(183, 110, 121, 0.4));
+}
+
+.snipLine {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-rose-gold), transparent);
+  margin-top: 4px;
+  transform-origin: center;
+}
+
+.particlesContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hairParticle {
+  position: absolute;
+  background: linear-gradient(180deg, #8a6b50, #6b4f3a);
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.sparkle::before,
+.sparkle::after {
+  content: '';
+  position: absolute;
+  background: var(--color-champagne);
+}
+
+.sparkle::before {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1px;
+}
+
+.sparkle::after {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 1px;
+}
+
+.ctaArea {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.ctaText {
+  font-family: var(--font-elegant);
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .section {
+    min-height: 400vh;
+  }
+
+  .visualArea {
+    height: 350px;
+  }
+
+  .personImageWrapper {
+    width: 200px;
+    height: 200px;
+    border-radius: 16px;
+  }
+
+  .title {
+    font-size: clamp(1.8rem, 6vw, 3rem);
+  }
+}

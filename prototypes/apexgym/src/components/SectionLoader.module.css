@@ -1,0 +1,30 @@
+.loader {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 16px; padding: 80px 0;
+}
+
+.spinnerWrap {
+  position: relative; width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.ring {
+  position: absolute; inset: 0;
+  border: 2px solid var(--border-color);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+}
+
+.bolt {
+  width: 18px; height: 18px;
+  filter: drop-shadow(0 0 8px var(--accent-glow));
+}
+
+.text {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,114 @@
+/* ─── Newsletter Strip ─── */
+.newsletter {
+  background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(245,158,11,0.02));
+  border-bottom: 1px solid var(--border-color);
+  padding: 48px 0;
+}
+.nlInner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.nlText { max-width: 400px; }
+.nlTitle { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+.nlSub { font-size: 0.88rem; color: var(--text-muted); }
+.nlForm { display: flex; gap: 0; flex: 1; max-width: 400px; }
+.nlInput {
+  flex: 1; padding: 14px 18px;
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-right: none; border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem;
+  outline: none; transition: border-color var(--transition-fast);
+}
+.nlInput:focus { border-color: var(--accent); }
+.nlBtn {
+  padding: 14px 20px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: #0a0a0a; cursor: pointer; display: flex; align-items: center;
+  transition: all var(--transition-fast);
+}
+.nlBtn:hover { box-shadow: 0 0 20px var(--accent-glow); }
+
+/* ─── Footer ─── */
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+}
+.inner { padding: 64px 24px 0; }
+.grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  gap: 48px;
+}
+
+/* Brand */
+.brand { display: flex; flex-direction: column; gap: 16px; }
+.logo { display: flex; align-items: center; gap: 8px; }
+.logoIconWrap {
+  width: 28px; height: 28px; border-radius: 8px;
+  background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.25);
+  display: flex; align-items: center; justify-content: center;
+}
+.logoText {
+  font-family: var(--font-heading); font-weight: 900; font-size: 1.2rem;
+  letter-spacing: 3px;
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-light));
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.logoSub {
+  font-family: var(--font-heading); font-weight: 300; font-size: 0.6rem;
+  letter-spacing: 3px; color: var(--text-muted); margin-left: -4px;
+}
+.tagline { color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; max-width: 280px; }
+.socials { display: flex; gap: 10px; margin-top: 4px; }
+.socialLink {
+  width: 36px; height: 36px; border-radius: 10px;
+  border: 1px solid var(--border-color); display: flex;
+  align-items: center; justify-content: center;
+  color: var(--text-muted); background: var(--bg-card);
+  transition: all var(--transition-fast);
+}
+.socialLink:hover {
+  border-color: var(--accent); color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(245,158,11,0.15);
+}
+
+/* Columns */
+.col { display: flex; flex-direction: column; gap: 12px; }
+.colTitle {
+  font-size: 0.82rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 2px; color: var(--text-primary); margin-bottom: 8px;
+}
+.link {
+  color: var(--text-muted); font-size: 0.88rem;
+  transition: all var(--transition-fast);
+  display: inline-flex; align-items: center; gap: 4px;
+}
+.link:hover { color: var(--accent); transform: translateX(4px); }
+
+/* Contact items */
+.contactItem {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;
+}
+.contactItem svg { flex-shrink: 0; margin-top: 3px; }
+
+/* Bottom */
+.bottom {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 24px 0; margin-top: 48px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted); font-size: 0.8rem;
+}
+.bottomLinks { display: flex; align-items: center; gap: 12px; }
+.bottomLinks a { color: var(--text-muted); transition: color var(--transition-fast); }
+.bottomLinks a:hover { color: var(--accent); }
+.bottomDot { color: var(--border-color); }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .nlInner { flex-direction: column; text-align: center; }
+  .nlForm { max-width: 100%; }
+  .bottom { flex-direction: column; gap: 12px; text-align: center; }
+}
+@media (max-width: 480px) {
+  .grid { grid-template-columns: 1fr; }
+}
