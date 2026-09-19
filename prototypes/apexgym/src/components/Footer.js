@@ -69,7 +69,7 @@ export default function Footer() {
           </div>
         </div>
         <div className={styles.bottom}>
-          <p>&copy; {new Date().getFullYear()} This product licensed under NOEMA Studio. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} This product is licensed under NOEMA Studio. All rights reserved.</p>
           <div className={styles.bottomLinks}>
             Privacy Policy
             <span className={styles.bottomDot}>•</span>
