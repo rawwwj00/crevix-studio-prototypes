@@ -69,11 +69,11 @@ export default function Footer() {
           </div>
         </div>
         <div className={styles.bottom}>
-          <p>&copy; {new Date().getFullYear()} This product licensed under <a href="https://www.crevix-studio.in/">Crevix Studio</a>. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} This product licensed under NOEMA Studio. All rights reserved.</p>
           <div className={styles.bottomLinks}>
-            <a href="https://www.crevix-studio.in/">Privacy Policy</a>
+            Privacy Policy
             <span className={styles.bottomDot}>•</span>
-            <a href="https://www.crevix-studio.in/">Terms of Service</a>
+            Terms of Service
           </div>
         </div>
       </div>
